@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.floor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    align-content: end;
+}
+
+.floor-boxes {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+#apartment {
+    flex: 1;
+    background-color: #f7ecec;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.floor-number,
+.floor-call {
+    align-self: center;
+    width: 100px;
+    padding: 5px;
+}
+
+#elevators {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.elevator img {
+    width: 50px;
+    height: 50px;
+}
+
+.elevator {
+    width: 60px;
+    height: 60px;
+    /* padding: 2px; */
+    position: relative;
+    transition: all ease-in-out 1s;
+    bottom: 60px;
+}
+
+.floor-call-btn {
+    background-color: green;
+    color: #fff;
+    border: 1px solid green;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.floor-call-btn.waiting {
+    background-color: red;
+    border-color: red;
+}
+
+.floor-call-btn.arrived {
+    background-color: #fff;
+    border-color: green;
+    color: #000;
+}
+
+.floor-call-btn:disabled {
+    cursor: not-allowed;
+}
+
+.elevator.free {
+    background: url('./elevator-free.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
+.elevator.engage {
+    background: url('./elevator-engage.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
+.elevator.moving {
+    background: url('./elevator-moving.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
